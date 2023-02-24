@@ -40,7 +40,6 @@ func (nopReadCloser) Close() error { return nil }
 
 // NewClient ...
 func NewClient(config checkout.Config) *HTTPClient {
-
     client = &HTTPClient{
         HTTPClient:           config.HTTPClient,
         PublicKey:            config.PublicKey,
@@ -56,7 +55,6 @@ func NewClient(config checkout.Config) *HTTPClient {
 
 // NewTransferClient ...
 func NewTransferClient(config checkout.Config) *HTTPClient {
-
     client = &HTTPClient{
         HTTPClient:           config.HTTPClient,
         PublicKey:            config.PublicKey,

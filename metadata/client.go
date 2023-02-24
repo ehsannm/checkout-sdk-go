@@ -2,6 +2,7 @@ package metadata
 
 import (
 	"encoding/json"
+
 	"github.com/checkout/checkout-sdk-go"
 	"github.com/checkout/checkout-sdk-go/httpclient"
 )
@@ -15,6 +16,7 @@ type Client struct {
 
 // NewClient ...
 func NewClient(config checkout.Config) *Client {
+	config.BearerAuthentication = true
 	return &Client{
 		API: httpclient.NewClient(config),
 	}
